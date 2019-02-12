@@ -115,7 +115,30 @@ public class playerScript : MonoBehaviour
         }
 
     }
+    //FUNÇÕESPARA TRATAR COLISÃO
+    void OnCollisionEnter2D(Collision2D col) {
+       if (col.gameObject.tag == "caixa"){
+           print("Colidiu");
+       }
+    }
+    void OnCollisionExit2D(Collision2D col) {
+        if (col.gameObject.tag == "caixa"){
+           print("saiu da caixa");
+       }
+    }
 
+    void OnCollisionStay2D(Collision2D col) {
+         if (col.gameObject.tag == "caixa"){
+           print("esta em colisão");
+       }
+    }
+
+    //FUNÇÕES PARA TRATAR TRIGGERS 
+     void OnTriggerEnter2D(Collider2D col) {
+       if (col.gameObject.tag == "caixa"){
+           print("Colidiu");
+       }
+    }
 
     }
 
